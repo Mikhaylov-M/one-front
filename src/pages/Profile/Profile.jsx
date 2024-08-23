@@ -41,6 +41,7 @@ export const Profile = () => {
 						},
 					}
 				);
+        console.log(response);
 				setUserStatistics(response.data);
 			}
 		} catch (error) {
@@ -94,10 +95,12 @@ export const Profile = () => {
 				totalPaid={userStatistics?.total_paid}
 				deliveryLevel={userStatistics?.deliveryLevel}
 				totalWeight={userStatistics?.total_weight}
+        personalCode={data?.personal_code}
 			/>
 			<Level
 				deliveryLevel={userStatisticsThreeMonth?.deliveryLevel}
 				totalWeight={userStatisticsThreeMonth?.totalWeight}
+        personalCode={data?.personal_code}
 			/>
 			<Information personalcode={data?.personal_code} />
 		</>
